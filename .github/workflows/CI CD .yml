@@ -23,7 +23,7 @@ jobs:
     - name: Create artifact directory
       run: mkdir -p ${{ github.workspace }}/artifacts
 
-    - name: Copy files
+    - name: Copy build artifacts
       run: cp **/*.zip ${{ github.workspace }}/artifacts/
 
     - name: Upload build artifact
@@ -77,5 +77,4 @@ jobs:
     needs: deploy
     steps:
     - name: Notification
-      run: echo "Pipeline completed. 
-
+      run: echo "Pipeline completed successfully."
