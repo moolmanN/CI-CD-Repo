@@ -18,7 +18,7 @@ jobs:
         dotnet-version: '8.x'
 
     - name: Build project
-      run: dotnet build YourProject.csproj --configuration Release
+      run: dotnet build Project.csproj --configuration Release
 
     - name: Create artifact directory
       run: mkdir -p ${{ github.workspace }}/artifacts
@@ -45,7 +45,7 @@ jobs:
         dotnet-version: '8.x'
 
     - name: Run tests
-      run: dotnet test YourProject.Tests.csproj --configuration Release --logger trx
+      run: dotnet test Project.Tests.csproj --configuration Release --logger trx
 
     - name: Upload test results
       uses: actions/upload-artifact@v3
